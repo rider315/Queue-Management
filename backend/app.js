@@ -10,7 +10,7 @@ const queueRoutes = require('./routes/queue');
 
 const app = express();
 app.use(cors({
-  origin: 'http://13.127.38.42',  // Your EC2 IP address
+  origin: 'http://13.202.125.143',  // Your EC2 IP address
 }));
 app.use(bodyParser.json());
 

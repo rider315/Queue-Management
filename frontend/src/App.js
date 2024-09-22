@@ -9,7 +9,7 @@ function App() {
 
   const handleScanQR = async () => {
     try {
-      const response = await axios.post('http://13.127.38.42/api/queue/generate');
+      const response = await axios.post('http://13.202.125.143/api/queue/generate');
       setQueueNumber(response.data.queueNumber);
     } catch (error) {
       console.error('Error generating queue number', error);
@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <h1>Queue Management</h1>
-      <QRCodeCanvas value="http://13.127.38.42/api/queue/generate-from-qr" />
+      <QRCodeCanvas value="http://13.202.125.143/api/queue/generate-from-qr" />
  {/* Here, I used QRCodeCanvas */}
       <button onClick={handleScanQR}>Scan QR and Get Queue Number</button>
       {queueNumber && <h2>Your Queue Number is: {queueNumber}</h2>}
