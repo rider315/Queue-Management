@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <h1>Queue Management</h1>
-      <QRCodeCanvas value="http://yourshop.com/scan" /> {/* Here, I used QRCodeCanvas */}
+      <QRCodeCanvas value="http://13.127.38.42/scan" /> {/* Here, I used QRCodeCanvas */}
       <button onClick={handleScanQR}>Scan QR and Get Queue Number</button>
       {queueNumber && <h2>Your Queue Number is: {queueNumber}</h2>}
     </div>
