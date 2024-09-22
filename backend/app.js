@@ -9,7 +9,9 @@ dotenv.config();
 const queueRoutes = require('./routes/queue');
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: 'http://13.127.38.42',  // Replace with your EC2 public IP
+}));
 app.use(bodyParser.json());
 
 // Connect to DB
